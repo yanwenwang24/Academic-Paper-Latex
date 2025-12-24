@@ -1,0 +1,37 @@
+# Core LaTeX auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.dvi
+*.ps
+*.nav
+*.snm
+*.vrb
+
+# Bibliography auxiliary files (BibLaTeX/Biber)
+*.bbl
+*.bcf
+*.blg
+*.run.xml
+
+# Build tool auxiliary files (latexmk)
+*.fdb_latexmk
+*.fls
+
+# SyncTeX files (used for jumping between PDF and code)
+*.synctex.gz
+*.synctex(busy)
+
+# Editor specific settings
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.idea/
+*.swp
+
+# OS specific
+.DS_Store
+Thumbs.db
