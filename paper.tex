@@ -1,0 +1,41 @@
+\documentclass[11pt, letterpaper]{article}
+
+\usepackage{paper}
+
+% --- Metadata ---
+\title{A LaTeX Template for Academic Manuscripts}
+
+\author[1]{Jane Doe}
+\author[2]{John Smith}
+\author[1]{Alice Johnson}
+
+\affil[1]{Department of Economics, Harvard University}
+\affil[2]{Department of Statistics, Stanford University}
+
+\date{\today}
+
+\begin{document}
+
+% --- Title Page ---
+\maketitle
+
+% Abstract
+\begin{abstract}
+    \noindent
+    \input{sections/00_abstract}
+\end{abstract}
+
+% --- Main Content ---
+\newpage
+
+\input{sections/01_introduction}
+\input{sections/02_background}
+\input{sections/03_method}
+\input{sections/04_results}
+\input{sections/05_conclusion}
+
+% --- References ---
+\newpage
+\printbibliography
+
+\end{document}
