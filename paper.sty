@@ -2,10 +2,14 @@
 
 % --- 1. Fonts and Encoding ---
 \usepackage[utf8]{inputenc}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{amsmath}
+\usepackage{mathtools}
 \usepackage[T1]{fontenc}
-\usepackage{mathpazo}
+\usepackage{newpxtext}
+\usepackage{newpxmath}
 \usepackage{microtype}
-\usepackage{amsmath, amssymb, amsfonts, mathtools}
+\usepackage{enumitem}
 
 % --- 2. Page Layout ---
 \usepackage[margin=1in]{geometry}
@@ -34,17 +38,17 @@
 
 % Section: Centered, Large, Bold
 \titleformat{\section}
-{\centering\Large\bfseries}
-{\thesection.}
-{1em}
-{}
+  {\centering\Large\bfseries}
+  {\thesection.}
+  {1em}
+  {}
 
 % Subsection: Left-aligned, Bold
 \titleformat{\subsection}
-{\large\bfseries}
-{\thesubsection}
-{1em}
-{}
+  {\large\bfseries}
+  {\thesubsection}
+  {1em}
+  {}
 
 % --- 6. Abstract ---
 \usepackage{abstract}
@@ -55,8 +59,7 @@
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{multirow}
-\usepackage[table,xcdraw]{xcolor}
-\usepackage{threeparttable}
+\usepackage{threeparttable} 
 \usepackage{etoolbox}
 
 \usepackage{caption}
@@ -67,22 +70,23 @@
 
 \DeclareCaptionLabelFormat{smallcaps}{\small\textsc{#1}~#2}
 \captionsetup{
-  labelformat=smallcaps,
-  labelsep=period,
-  labelfont=sc,
-  justification=centering
+    labelformat=smallcaps,
+    labelsep=period,
+    labelfont=sc,
+    justification=centering
 }
 \captionsetup[table]{position=top}
 \captionsetup[figure]{position=bottom}
 
 % --- 8. Bibliography ---
 \usepackage[backend=biber, style=apa, sorting=nyt]{biblatex}
+\newcommand{\posscite}[1]{\citeauthor{#1}'s (\citeyear{#1})}
 \addbibresource{library.bib}
 
 % --- 9. Hyperlinks ---
 \usepackage{hyperref}
 \hypersetup{
-  hidelinks,
-  colorlinks=false,
-  pdftitle={Academic Manuscript Template}
+    hidelinks,
+    colorlinks=false,
+    pdftitle={Academic Manuscript Template}
 }
