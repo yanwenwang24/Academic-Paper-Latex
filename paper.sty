@@ -34,44 +34,46 @@
 
 % Section: Centered, Large, Bold
 \titleformat{\section}
-  {\centering\Large\bfseries}
-  {\thesection.}
-  {1em}
-  {}
+{\centering\Large\bfseries}
+{\thesection.}
+{1em}
+{}
 
 % Subsection: Left-aligned, Bold
 \titleformat{\subsection}
-  {\large\bfseries}
-  {\thesubsection}
-  {1em}
-  {}
+{\large\bfseries}
+{\thesubsection}
+{1em}
+{}
 
 % --- 6. Abstract ---
 \usepackage{abstract}
 \renewcommand{\abstractname}{}
 \renewcommand{\absnamepos}{empty}
 
-% --- 7. Figures, Tables, and Captions ---
+% --- 7. Tables and Figures ---
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{multirow}
 \usepackage[table,xcdraw]{xcolor}
+\usepackage{threeparttable}
+\usepackage{etoolbox}
 
 \usepackage{caption}
 \usepackage{subcaption}
 
-\DeclareCaptionLabelFormat{smallcaps}{\textsc{#1}~#2}
+\AtBeginEnvironment{table}{\small\centering}
+\AtBeginEnvironment{tablenotes}{\footnotesize}
+
+\DeclareCaptionLabelFormat{smallcaps}{\small\textsc{#1}~#2}
 \captionsetup{
-    labelformat=smallcaps,
-    labelsep=period,
-    font=small,
-    labelfont=sc
+  labelformat=smallcaps,
+  labelsep=period,
+  labelfont=sc,
+  justification=centering
 }
 \captionsetup[table]{position=top}
 \captionsetup[figure]{position=bottom}
-
-% Table Notes
-\newcommand{\tablenote}[1]{\par\vspace{5pt}\footnotesize\textit{Note:} #1}
 
 % --- 8. Bibliography ---
 \usepackage[backend=biber, style=apa, sorting=nyt]{biblatex}
@@ -80,7 +82,7 @@
 % --- 9. Hyperlinks ---
 \usepackage{hyperref}
 \hypersetup{
-    hidelinks,
-    colorlinks=false,
-    pdftitle={Academic Manuscript Template}
+  hidelinks,
+  colorlinks=false,
+  pdftitle={Academic Manuscript Template}
 }
