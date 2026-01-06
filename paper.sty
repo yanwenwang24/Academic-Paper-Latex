@@ -14,7 +14,7 @@
 % --- 2. Page Layout ---
 \usepackage[margin=1in]{geometry}
 \usepackage{setspace}
-\onehalfspacing
+\onehalfspacing % \doublespacing
 \usepackage[flushmargin, hang]{footmisc}
 
 % --- 3. Headers and Footers ---
@@ -39,17 +39,17 @@
 
 % Section: Centered, Large, Bold
 \titleformat{\section}
-  {\centering\Large\bfseries}
-  {\thesection.}
-  {1em}
-  {}
+{\centering\Large\bfseries}
+{\thesection.}
+{1em}
+{}
 
 % Subsection: Left-aligned, Bold
 \titleformat{\subsection}
-  {\large\bfseries}
-  {\thesubsection}
-  {1em}
-  {}
+{\large\bfseries}
+{\thesubsection}
+{1em}
+{}
 
 % --- 6. Abstract ---
 \usepackage{abstract}
@@ -60,7 +60,7 @@
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{multirow}
-\usepackage{threeparttable} 
+\usepackage{threeparttable}
 \usepackage{etoolbox}
 \usepackage[section]{placeins}
 
@@ -72,10 +72,10 @@
 
 \DeclareCaptionLabelFormat{smallcaps}{\small\textsc{#1}~#2}
 \captionsetup{
-    labelformat=smallcaps,
-    labelsep=period,
-    labelfont=sc,
-    justification=centering
+  labelformat=smallcaps,
+  labelsep=period,
+  labelfont=sc,
+  justification=centering
 }
 \captionsetup[table]{position=top}
 \captionsetup[figure]{position=bottom}
@@ -88,7 +88,7 @@
 % --- 9. Hyperlinks ---
 \usepackage{hyperref}
 \hypersetup{
-    hidelinks,
-    colorlinks=false,
-    pdftitle={Academic Manuscript Template}
+  hidelinks,
+  colorlinks=false,
+  pdftitle={Academic Manuscript Template}
 }
